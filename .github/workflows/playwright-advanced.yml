@@ -25,7 +25,6 @@ on:
           - prod
 
 env:
-  # Global environment variables
   NODE_VERSION: 18
 
 jobs:
@@ -60,23 +59,9 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     
-    - name: Set environment URL
-      run: |
-        case "${{ github.event.inputs.environment }}" in
-          "staging")
-            echo "BASE_URL=https://portal-staging.ntdp-sa.com" >> $GITHUB_ENV
-            ;;
-          "prod")
-            echo "BASE_URL=https://portal.ntdp-sa.com" >> $GITHUB_ENV
-            ;;
-          *)
-            echo "BASE_URL=https://portal-uat.ntdp-sa.com" >> $GITHUB_ENV
-            ;;
-        esac
-    
     - name: Create .env file
       run: |
-        echo "BASE_URL=${BASE_URL:-https://portal-uat.ntdp-sa.com}" >> .env
+        echo "BASE_URL=https://portal-uat.ntdp-sa.com" >> .env
         echo "SAUDI_ID=1111111111" >> .env
         echo "EXPECTED_NAME=Dummy" >> .env
     
@@ -100,21 +85,16 @@ jobs:
       run: |
         echo "## Test Results for ${{ matrix.browser }}" >> $GITHUB_STEP_SUMMARY
         echo "Browser: ${{ matrix.browser }}" >> $GITHUB_STEP_SUMMARY
-        echo "Environment: $(echo $BASE_URL)" >> $GITHUB_STEP_SUMMARY
+        echo "Environment: UAT Portal" >> $GITHUB_STEP_SUMMARY
         if [ -f test-results/results.json ]; then
           echo "Results available in artifacts" >> $GITHUB_STEP_SUMMARY
         fi
 
-  # Slack notification on failure
+  # Slack notification on failure (disabled)
   notify:
     needs: test
     runs-on: ubuntu-latest
-    if: failure()
+    if: false  # Disabled - no slack webhook configured
     steps:
     - name: Notify Slack on failure
-      uses: 8398a7/action-slack@v3
-      with:
-        status: failure
-        text: 'NTDP Playwright tests failed!'
-      env:
-        SLACK_WEBHOOK_URL: "disabled"
+      run: echo "Slack notification disabled"
