@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "prefer-const": "warn",
+    "no-var": "error"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "test-results/",
+    "playwright-report/",
+    "dist/"
+  ]
+}

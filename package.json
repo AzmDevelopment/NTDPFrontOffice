@@ -14,15 +14,25 @@
     "test:ci:chromium": "playwright test --project=chromium --reporter=junit,html",
     "test:ci:firefox": "playwright test --project=firefox --reporter=junit,html",
     "test:ci:webkit": "playwright test --project=webkit --reporter=junit,html",
-    "install:ci": "npx playwright install --with-deps"
+    "install:ci": "npx playwright install --with-deps",
+    "lint": "eslint . --ext .ts --fix",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": ["playwright", "automation", "testing"],
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "dotenv": "^16.3.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-playwright": "^0.18.0",
     "typescript": "^5.3.3"
   }
 }
