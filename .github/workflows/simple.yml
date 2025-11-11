@@ -1,4 +1,4 @@
-name: NTDP Playwright Tests - Simple
+name: NTDP Tests (Simple & Reliable)
 
 on:
   push:
