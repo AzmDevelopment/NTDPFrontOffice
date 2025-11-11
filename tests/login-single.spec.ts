@@ -5,7 +5,7 @@ import { validCredentials } from '../testData/credentials';
 
 test.describe('NTDP Portal Login - Single Valid Test', () => {
   test('should successfully login and redirect to dashboard', async ({ page }) => {
-    test.setTimeout(60000);
+    test.setTimeout(90000); // 90 seconds to accommodate 30-second wait
     const loginPage = new LoginPage(page);
     const dashboardPage = new DashboardPage(page);
 
@@ -22,9 +22,9 @@ test.describe('NTDP Portal Login - Single Valid Test', () => {
     // Step 4: Click login button
     await loginPage.clickLogin();
 
-    // Step 5: Wait for login response (extended wait for processing)
+    // Step 5: Wait for login response and dashboard loading (30 seconds for full load)
     await page.waitForLoadState('domcontentloaded');
-    await page.waitForTimeout(25000);
+    await page.waitForTimeout(30000);
 
     // Step 6: Check for login errors first with detailed debugging
     console.log('=== CHECKING FOR ERRORS ===');
@@ -100,8 +100,9 @@ test.describe('NTDP Portal Login - Single Valid Test', () => {
     } else {
       console.log('No redirect detected - checking for in-page success indicators');
       
-      // If no redirect, verify welcome message appears on same page
-      await expect(page.getByText(/Welcome/i)).toBeVisible();
+      // If no redirect, verify specific welcome message appears on same page
+      // Use the specific heading element to avoid strict mode violation
+      await expect(page.getByRole('heading', { name: 'Welcome Dummy' })).toBeVisible();
       
       // Optionally verify login form is hidden or disabled
       if (loginFormHidden) {

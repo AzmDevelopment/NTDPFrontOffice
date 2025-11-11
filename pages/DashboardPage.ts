@@ -8,16 +8,17 @@ export class DashboardPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.welcomeHeading = page.getByRole('heading', { name: /Welcome/i });
+    // Use specific heading to avoid strict mode violation
+    this.welcomeHeading = page.getByRole('heading', { name: 'Welcome Dummy' });
     this.mainContent = page.locator('main, .main-content, #main');
-    // Fallback selectors if exact heading isn't available yet or differs slightly
+    // Fallback selectors for different welcome messages
     this.fallbackWelcomeCandidates = [
-      page.getByText(/Welcome/i),
+      page.locator('h3.user-name-welcome'), // Specific class from error
+      page.getByRole('heading', { name: /Welcome/i }),
       page.locator('h1:has-text("Welcome")'),
       page.locator('h2:has-text("Welcome")'),
       page.locator('h3:has-text("Welcome")'),
-      page.locator('[class*="welcome"]'),
-      page.locator('text=Welcome')
+      page.locator('[class*="welcome"]')
     ];
   }
 
