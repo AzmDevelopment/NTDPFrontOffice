@@ -1,10 +1,8 @@
 name: NTDP Auto Tests (Main)
 
 on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+  # Disabled - using simple workflow instead
+  workflow_dispatch:
 
 jobs:
   test:
