@@ -14,6 +14,11 @@
     "test:ci:chromium": "playwright test --project=chromium --reporter=junit,html",
     "test:ci:firefox": "playwright test --project=firefox --reporter=junit,html",
     "test:ci:webkit": "playwright test --project=webkit --reporter=junit,html",
+    "test:security": "playwright test tests/security.spec.ts --reporter=html",
+    "test:security:basic": "playwright test tests/security.spec.ts --grep \"basic security scan\"",
+    "test:security:owasp": "playwright test tests/security.spec.ts --grep \"OWASP Top 10\"",
+    "test:security:vulnerabilities": "playwright test tests/security.spec.ts --grep \"common web vulnerabilities\"",
+    "security:reports": "powershell -ExecutionPolicy Bypass -File .\\view-reports.ps1",
     "install:ci": "npx playwright install --with-deps",
     "lint": "eslint . --ext .ts --fix",
     "type-check": "tsc --noEmit"
@@ -30,9 +35,12 @@
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
     "dotenv": "^16.3.1",
     "eslint": "^8.57.1",
     "eslint-plugin-playwright": "^0.18.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "zaproxy": "^2.0.0-rc.6"
   }
 }
