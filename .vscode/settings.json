@@ -12,5 +12,13 @@
     "editor.formatOnSave": true,
     "sonarlint.enabled": false,
     "sonarlint.disableTelemetry": true,
-    "sonarlint.analysisExcludePattern": "**/*"
+    "sonarlint.analysisExcludePattern": "**/*",
+    "sonarlint.connectedMode.automatic": false,
+    "sonarlint.connectedMode.project": {},
+    "sonarlint.ls.javaHome": "",
+    "sonarlint.pathToNodeExecutable": "",
+    "sonarlint.output.showAnalyzerLogs": false,
+    "sonarlint.output.showVerboseLogs": false,
+    "sonarlint.trace.server": "off",
+    "extensions.ignoreRecommendations": true
 }
