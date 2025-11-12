@@ -1,11 +1,11 @@
 name: Security Testing with OWASP
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch: # Manual trigger only to avoid duplicate CI runs
+  # push:
+  #   branches: [main]
+  # pull_request:
+  #   branches: [main]
 
 env:
   NODE_VERSION: 18
