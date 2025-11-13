@@ -209,7 +209,6 @@ npm run install:ci                      # CI environment setup
 |----------|---------|---------|----------|
 | **simple.yml** | Push/PR  main | Essential tests + basic security | ~2-3 min |
 | **security-testing.yml** | Manual | Comprehensive OWASP testing | ~15-20 min |
-| **snyk-security.yml** | Manual | Dependency vulnerability scan | ~5 min |
 
 ### Supported Environments
 
