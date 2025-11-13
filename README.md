@@ -1,4 +1,4 @@
-﻿#  NTDP Front Office Automation
+﻿# NTDP Front Office Automation
 
 [![CI Status](https://github.com/UsamaArshadJadoon/NTDPFrontOffice/workflows/NTDP%20Portal%20Tests/badge.svg)](https://github.com/UsamaArshadJadoon/NTDPFrontOffice/actions)
 [![Security](https://img.shields.io/badge/Security-OWASP%20Top%2010-green)](https://owasp.org/Top10/)
@@ -7,19 +7,19 @@
 
 > **Comprehensive automated test suite for NTDP Portal using Playwright with TypeScript, featuring advanced security testing and OWASP Top 10 compliance validation.**
 
-##  Features
+## Features
 
--  **Complete Security Testing** - OWASP Top 10 vulnerability assessment
--  **Multi-Browser Support** - Chromium, Firefox, WebKit compatibility
--  **Page Object Model** - Maintainable and scalable test architecture
--  **Comprehensive Reporting** - HTML reports with screenshots and videos
--  **CI/CD Ready** - Optimized GitHub Actions workflows
--  **Network Resilience** - Retry logic and timeout handling
--  **Performance Monitoring** - Test execution metrics and analysis
+- **Complete Security Testing**- OWASP Top 10 vulnerability assessment
+- **Multi-Browser Support**- Chromium, Firefox, WebKit compatibility
+- **Page Object Model**- Maintainable and scalable test architecture
+- **Comprehensive Reporting**- HTML reports with screenshots and videos
+- **CI/CD Ready**- Optimized GitHub Actions workflows
+- **Network Resilience**- Retry logic and timeout handling
+- **Performance Monitoring**- Test execution metrics and analysis
 
 ---
 
-##  Project Structure
+## Project Structure
 
 ```text
 ntdp-frontoffice-automation/
@@ -42,23 +42,23 @@ ntdp-frontoffice-automation/
 
 ---
 
-##  Test Categories
+## Test Categories
 
 ### 1.  Security Testing Suite
 
-**Comprehensive OWASP Top 10 Coverage**
+#### Comprehensive OWASP Top 10 Coverage
 
 | Test Category | Tests | Coverage |
 |---------------|-------|----------|
-| **Pre-login Security** | 6 tests | Authentication, Headers, HTTPS |
-| **Post-login Security** | 6 tests | Session, Authorization, Data |
-| **OWASP Top 10** | 10 tests | Complete vulnerability assessment |
-| **Injection Testing** | 3 tests | SQL injection, XSS, Command injection |
-| **Security Headers** | 5 tests | CSP, HSTS, X-Frame-Options, etc. |
+| **Pre-login Security**| 6 tests | Authentication, Headers, HTTPS |
+| **Post-login Security**| 6 tests | Session, Authorization, Data |
+| **OWASP Top 10**| 10 tests | Complete vulnerability assessment |
+| **Injection Testing**| 3 tests | SQL injection, XSS, Command injection |
+| **Security Headers**| 5 tests | CSP, HSTS, X-Frame-Options, etc. |
 
 ### 2.  CI-Friendly Tests
 
-**Optimized for fast CI/CD execution**
+#### Optimized for fast CI/CD execution
 
 - Multi-browser compatibility testing
 - Network resilience validation
@@ -68,7 +68,7 @@ ntdp-frontoffice-automation/
 
 ### 3.  Functional Tests
 
-**Core application functionality**
+#### Core application functionality
 
 - User authentication flows
 - Dashboard navigation
@@ -78,12 +78,12 @@ ntdp-frontoffice-automation/
 
 ---
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
-- **Node.js** 18+
-- **npm** or **yarn**
+- **Node.js**18+
+- **npm**or **yarn**
 - **Git**
 
 ### Installation
@@ -119,40 +119,40 @@ ZAP_API_KEY=your-zap-api-key
 
 ---
 
-##  Usage
+## Usage
 
 ### Essential Commands
 
 ```bash
-#  Quick test run (Chromium only)
+# Quick test run (Chromium only)
 npm test
 
-#  All browsers
+# All browsers
 npm run test:all
 
-#  Visual mode (headed)
+# Visual mode (headed)
 npm run test:headed
 
-#  Debug mode
+# Debug mode
 npm run test:debug
 
-#  Interactive UI
+# Interactive UI
 npm run test:ui
 
-#  Generate reports
+# Generate reports
 npm run test:report
 ```
 
 ### Specialized Testing
 
 ```bash
-#  Security Testing
+# Security Testing
 npm run test:security                    # Full security suite
 npm run test:security:basic             # Basic security scan
 npm run test:security:owasp             # OWASP Top 10 tests
 npm run test:security:vulnerabilities   # Vulnerability testing
 
-#  CI-Optimized
+# CI-Optimized
 npm run test:ci                         # CI with reports
 npm run test:ci:chromium               # Chromium only
 npm run test:ci:firefox                # Firefox only
@@ -162,91 +162,91 @@ npm run test:ci:webkit                 # WebKit only
 ### Development Commands
 
 ```bash
-#  Code quality
+# Code quality
 npm run lint                            # ESLint check
 npm run type-check                      # TypeScript validation
 
-#  Installation
+# Installation
 npm run install:ci                      # CI environment setup
 ```
 
 ---
 
-##  Security Testing
+## Security Testing
 
 ### OWASP Top 10 2021 Coverage
 
 | OWASP Category | Status | Tests | Risk Level |
 |----------------|--------|-------|------------|
-| **A01** - Broken Access Control |  Covered | 4 tests | Medium |
-| **A02** - Cryptographic Failures |  Covered | 3 tests | Medium |
-| **A03** - Injection |  Covered | 5 tests | Low |
-| **A04** - Insecure Design |  Covered | 2 tests | Low |
-| **A05** - Security Misconfiguration |  Covered | 6 tests | Medium |
-| **A06** - Vulnerable Components |  Covered | 2 tests | Low |
-| **A07** - Authentication Failures |  Covered | 4 tests | Low |
-| **A08** - Data Integrity Failures |  Covered | 2 tests | Low |
-| **A09** - Logging Failures |  Covered | 2 tests | Low |
-| **A10** - Server-Side Request Forgery |  Covered | 2 tests | Low |
+| **A01**- Broken Access Control |  Covered | 4 tests | Medium |
+| **A02**- Cryptographic Failures |  Covered | 3 tests | Medium |
+| **A03**- Injection |  Covered | 5 tests | Low |
+| **A04**- Insecure Design |  Covered | 2 tests | Low |
+| **A05**- Security Misconfiguration |  Covered | 6 tests | Medium |
+| **A06**- Vulnerable Components |  Covered | 2 tests | Low |
+| **A07**- Authentication Failures |  Covered | 4 tests | Low |
+| **A08**- Data Integrity Failures |  Covered | 2 tests | Low |
+| **A09**- Logging Failures |  Covered | 2 tests | Low |
+| **A10**- Server-Side Request Forgery |  Covered | 2 tests | Low |
 
 ### Security Test Features
 
-- ** Automated Vulnerability Scanning**
-- ** Cookie Security Analysis**
-- ** HTTPS Protocol Validation**
-- ** Security Header Verification**
-- ** Injection Attack Testing**
-- ** Screenshot Evidence Collection**
-- ** Detailed Security Reports**
+- **Automated Vulnerability Scanning**
+- **Cookie Security Analysis**
+- **HTTPS Protocol Validation**
+- **Security Header Verification**
+- **Injection Attack Testing**
+- **Screenshot Evidence Collection**
+- **Detailed Security Reports**
 
 ---
 
-##  CI/CD Integration
+## CI/CD Integration
 
 ### GitHub Actions Workflows
 
 | Workflow | Trigger | Purpose | Duration |
 |----------|---------|---------|----------|
-| **simple.yml** | Push/PR  main | Essential tests + basic security | ~2-3 min |
-| **security-testing.yml** | Manual | Comprehensive OWASP testing | ~15-20 min |
+| **simple.yml**| Push/PR  main | Essential tests + basic security | ~2-3 min |
+| **security-testing.yml**| Manual | Comprehensive OWASP testing | ~15-20 min |
 
 ### Supported Environments
 
--  **Ubuntu Latest** (Primary CI environment)
--  **Windows** (Local development)
--  **macOS** (Cross-platform testing)
+- **Ubuntu Latest**(Primary CI environment)
+- **Windows**(Local development)
+- **macOS**(Cross-platform testing)
 
 ### Browser Matrix
 
--  **Chromium** (Primary)
--  **Firefox**
--  **WebKit** (Safari engine)
+- **Chromium**(Primary)
+- **Firefox**
+- **WebKit**(Safari engine)
 
 ---
 
-##  Reporting & Analytics
+## Reporting & Analytics
 
 ### Test Reports
 
-####  HTML Reports
+#### HTML Reports
 
-- **Interactive test results** with filtering
-- **Screenshots** for failed tests
-- **Video recordings** of test execution
-- **Performance metrics** and timing
-- **Error traces** with stack information
+- **Interactive test results**with filtering
+- **Screenshots**for failed tests
+- **Video recordings**of test execution
+- **Performance metrics**and timing
+- **Error traces**with stack information
 
-####  Security Reports
+#### Security Reports
 
-- **OWASP Top 10 assessment** with risk ratings
-- **Vulnerability findings** with remediation steps
+- **OWASP Top 10 assessment**with risk ratings
+- **Vulnerability findings**with remediation steps
 - **Security header analysis**
 - **Cookie security evaluation**
-- **Compliance status** reporting
+- **Compliance status**reporting
 
-####  CI Reports
+#### CI Reports
 
-- **JUnit XML** for CI integration
+- **JUnit XML**for CI integration
 - **Test result summaries**
 - **Artifact collection**
 - **Failure analysis**
@@ -265,7 +265,7 @@ test-results/
 
 ---
 
-##  Architecture
+## Architecture
 
 ### Page Object Model Implementation
 
@@ -306,33 +306,33 @@ export const testData = {
 
 ---
 
-##  Performance Metrics
+## Performance Metrics
 
 ### Current Test Statistics
 
 | Metric | Value | Target |
 |--------|-------|--------|
-| **Total Tests** | 30 | - |
-| **Success Rate** | 100% | >95% |
-| **Execution Time** | ~5 min | <10 min |
-| **Coverage** | OWASP Top 10 | 100% |
-| **Browsers** | 3 | 3 |
-| **Security Issues** | 6 (Medium) | 0 (High) |
+| **Total Tests**| 30 | - |
+| **Success Rate**| 100% | >95% |
+| **Execution Time**| ~5 min | <10 min |
+| **Coverage**| OWASP Top 10 | 100% |
+| **Browsers**| 3 | 3 |
+| **Security Issues**| 6 (Medium) | 0 (High) |
 
 ### Performance Optimization
 
--  **Parallel Execution** - Multiple tests run simultaneously
--  **Smart Retries** - Automatic retry on network failures
--  **Artifact Optimization** - Efficient screenshot/video capture
--  **CI Caching** - Dependency and browser caching
+- **Parallel Execution**- Multiple tests run simultaneously
+- **Smart Retries**- Automatic retry on network failures
+- **Artifact Optimization**- Efficient screenshot/video capture
+- **CI Caching**- Dependency and browser caching
 
 ---
 
-##  Troubleshooting
+## Troubleshooting
 
 ### Common Issues & Solutions
 
-####  Network Timeouts
+#### Network Timeouts
 
 ```bash
 # Issue: Tests failing due to network timeouts
@@ -340,7 +340,7 @@ export const testData = {
 npx playwright test --timeout=120000
 ```
 
-####  Element Not Found
+#### Element Not Found
 
 ```bash
 # Issue: Selectors not working after UI changes
@@ -348,7 +348,7 @@ npx playwright test --timeout=120000
 # Check browser developer tools for current selectors
 ```
 
-####  Security Test Failures
+#### Security Test Failures
 
 ```bash
 # Issue: Security tests reporting false positives
@@ -359,36 +359,36 @@ npx playwright test --timeout=120000
 ### Debug Tools
 
 ```bash
-#  Debug specific test
+# Debug specific test
 npx playwright test tests/login-single.spec.ts --debug
 
-#  Record test execution
+# Record test execution
 npx playwright test --headed --video=on
 
-#  Generate trace
+# Generate trace
 npx playwright test --trace=on
 ```
 
 ---
 
-##  Contributing
+## Contributing
 
 ### Development Workflow
 
-1. ** Fork** the repository
-2. ** Create** feature branch (`git checkout -b feature/amazing-feature`)
-3. ** Write** tests following existing patterns
-4. ** Run** full test suite (`npm run test:all`)
-5. ** Update** documentation
-6. ** Submit** pull request
+1. **Fork** the repository
+2. **Create** feature branch (`git checkout -b feature/amazing-feature`)
+3. **Write** tests following existing patterns
+4. **Run** full test suite (`npm run test:all`)
+5. **Update** documentation
+6. **Submit** pull request
 
 ### Code Standards
 
--  **TypeScript** for type safety
--  **ESLint** configuration compliance
--  **Page Object Model** pattern
--  **Comprehensive test coverage**
--  **Security-first approach**
+- **TypeScript**for type safety
+- **ESLint**configuration compliance
+- **Page Object Model**pattern
+- **Comprehensive test coverage**
+- **Security-first approach**
 
 ### Commit Convention
 
@@ -401,44 +401,44 @@ test: add comprehensive OWASP A01 coverage
 
 ---
 
-##  Current Security Assessment
+## Current Security Assessment
 
-###  Security Status
+### Security Status
 
 | Risk Level | Count | Status |
 |------------|-------|---------|
-|  **High** | 0 |  Clean |
-|  **Medium** | 6 |  Review Required |
-|  **Low** | 0 |  Clean |
+|  **High**| 0 |  Clean |
+|  **Medium**| 6 |  Review Required |
+|  **Low**| 0 |  Clean |
 
-###  Remediation Recommendations
+### Remediation Recommendations
 
-1. ** Security Headers**
+1. **Security Headers**
    - Implement `X-Frame-Options: DENY`
    - Add `Content-Security-Policy`
    - Configure `Strict-Transport-Security`
 
-2. ** Cookie Security**
+2. **Cookie Security**
    - Add `Secure` flag for HTTPS cookies
    - Implement `HttpOnly` for session cookies
    - Configure proper `SameSite` attributes
 
-3. ** Access Control**
+3. **Access Control**
    - Review unauthorized access paths
    - Implement proper authentication checks
    - Add authorization middleware
 
 ---
 
-##  Documentation
+## Documentation
 
-###  Additional Resources
+### Additional Resources
 
 - [**Playwright Documentation**](https://playwright.dev/) - Official Playwright docs
 - [**OWASP Top 10**](https://owasp.org/Top10/) - Security vulnerability guide
 - [**TypeScript Handbook**](https://www.typescriptlang.org/docs/) - TypeScript reference
 
-###  Project Documentation
+### Project Documentation
 
 - [**Test Execution Report**](./TEST-EXECUTION-REPORT.md) - Detailed test results
 - [**Security Assessment**](./docs/security-assessment.md) - Security findings
@@ -447,20 +447,20 @@ test: add comprehensive OWASP A01 coverage
 
 ---
 
-##  License
+## License
 
-This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **ISC License**- see the [LICENSE](LICENSE) file for details.
 
 ---
 
-##  Support
+## Support
 
 ### Getting Help
 
-1.  **Documentation** - Check existing docs and guides
-2.  **Issues** - Search existing GitHub issues
-3.  **Discussions** - Community support and questions
-4.  **Bug Reports** - Create detailed issue with reproduction steps
+1. **Documentation** - Check existing docs and guides
+2. **Issues** - Search existing GitHub issues
+3. **Discussions** - Community support and questions
+4. **Bug Reports** - Create detailed issue with reproduction steps
 
 ### Contact
 
@@ -469,9 +469,7 @@ This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<div align="center">
-
-** Star this repository if it helped you! **
+**Star this repository if it helped you!**
 
 ![Test Status](https://img.shields.io/badge/Tests-30%20Passing-brightgreen)
 ![Security](https://img.shields.io/badge/Security-OWASP%20Compliant-green)
@@ -480,5 +478,3 @@ This project is licensed under the **ISC License** - see the [LICENSE](LICENSE) 
 ---
 
 **Last Updated**: November 2025 | **Framework**: Playwright + TypeScript | **Security**: OWASP Top 10 2021
-
-</div>
