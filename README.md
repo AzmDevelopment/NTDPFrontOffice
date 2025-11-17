@@ -206,30 +206,38 @@ npm run install:ci                      # CI environment setup
 
 This framework includes **comprehensive OWASP ZAP (Zed Attack Proxy)** integration for automated security testing.
 
-### Quick Start with ZAP
+### 🚀 New: Proxy-Based Integration
+
+All Playwright tests can run through the ZAP proxy, enabling **automatic passive security scanning** during normal test execution:
 
 ```bash
-# Start ZAP (automated script)
+# Start ZAP daemon
 .\start-zap.ps1
 
-# Run ZAP security tests
-npm run test:zap              # All ZAP tests
-npm run test:zap:passive      # Quick passive scan (~10s)
-npm run test:zap:spider       # Spider scan (~1-2min)
-npm run test:zap:active       # Active scan (~5-10min)
-npm run test:zap:full         # Full authenticated scan
+# Run tests through ZAP proxy
+npm run test:zap              # All tests with ZAP scanning
+npm run test:zap:chromium     # Chromium only with ZAP
 ```
+
+### How It Works
+
+1. **ZAP starts in daemon mode** before tests
+2. **All browser traffic** routes through ZAP proxy (localhost:8080)
+3. **ZAP passively scans** for security vulnerabilities
+4. **Reports auto-generate** after tests complete (HTML, JSON, Markdown)
+5. **GitHub Actions** automatically uploads reports as artifacts
 
 ### ZAP Features
 
-- **Passive Scanning** - Non-intrusive security analysis
-- **Active Scanning** - Attack simulation and penetration testing
-- **Spider Scanning** - Application mapping and discovery
-- **Authenticated Testing** - Post-login security assessment
+- **Automatic Passive Scanning** - No code changes, no test modifications
 - **Multiple Report Formats** - HTML, JSON, Markdown
-- **CI/CD Integration** - Docker support for pipelines
+- **CI/CD Integration** - Docker support for GitHub Actions
+- **Zero Impact** - Passive scanning doesn't affect application
+- **Comprehensive Coverage** - OWASP Top 10 vulnerability detection
 
-For detailed ZAP setup and usage, see [ZAP Integration Guide](docs/ZAP-INTEGRATION.md).
+For detailed setup and usage, see:
+- **Quick Start**: [docs/ZAP-PROXY-INTEGRATION.md](docs/ZAP-PROXY-INTEGRATION.md)
+- **Complete Guide**: [docs/ZAP-INTEGRATION.md](docs/ZAP-INTEGRATION.md)
 
 ---
 
