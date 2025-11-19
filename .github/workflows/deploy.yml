@@ -18,28 +18,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: ${{ github.event.inputs.environment || 'staging' }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
-
       - name: Install dependencies
         run: |
           npm ci
           npx playwright install --with-deps chromium
-
       - name: Run tests before deployment
         run: npx playwright test --config=playwright-fast-stable.config.ts
-
       - name: Deploy notification
         run: |
-          echo "🚀 Deployment to ${{ github.event.inputs.environment || 'staging' }} completed!"
-          echo "- **Commit:** ${{ github.sha }}"
-          echo "- **Author:** ${{ github.actor }}"
-          echo "- **Tests:** ✅ Passed (Ultra-fast ~34s execution)"
+          echo "Deployment to ${{ github.event.inputs.environment || 'staging' }} completed!"
+          echo "- Commit: ${{ github.sha }}"
+          echo "- Author: ${{ github.actor }}"
+          echo "- Tests: Passed (Ultra-fast ~34s execution)"
