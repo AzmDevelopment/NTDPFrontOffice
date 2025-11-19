@@ -5,6 +5,8 @@
         "ms-vscode.vscode-typescript-next"
     ],
     "unwantedRecommendations": [
-        "sonarsource.sonarlint-vscode"
+        "sonarsource.sonarlint-vscode",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-yaml"
     ]
 }

@@ -1,0 +1,29 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "yaml.validate": false,
+        "yaml.completion": false,
+        "yaml.hover": false,
+        "yaml.format.enable": false,
+        "yaml.schemas": {},
+        "yaml.schemaStore.enable": false,
+        "files.associations": {
+            "*.yml": "plaintext",
+            "*.yaml": "plaintext"
+        },
+        "problems.decorations.enabled": false
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-playwright.playwright"
+        ],
+        "unwantedRecommendations": [
+            "redhat.vscode-yaml",
+            "ms-vscode.vscode-yaml"
+        ]
+    }
+}

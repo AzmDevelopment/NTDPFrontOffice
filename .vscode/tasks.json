@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Disable YAML Validation",
+            "type": "shell",
+            "command": "echo",
+            "args": ["YAML validation disabled for this workspace"],
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            }
+        }
+    ]
+}
