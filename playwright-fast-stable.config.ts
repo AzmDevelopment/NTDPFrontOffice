@@ -65,6 +65,5 @@ export default defineConfig({
     }
   ],
 
-  // Fast global setup - minimal network check
-  globalSetup: require.resolve('./global-setup.ts'),
+  // Global setup disabled for faster CI execution
 });
